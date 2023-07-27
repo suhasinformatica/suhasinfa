@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "38YzhNlz0EdgZCZCDsVc42",
+    "name" : "AAMC_DST_AMCAS_Modernization",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

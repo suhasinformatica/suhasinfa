@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "elmCSO3pEECcHaCiV7OUkz",
+    "name" : "otm_A4s_Master_Amcas_Institution_R2.1",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

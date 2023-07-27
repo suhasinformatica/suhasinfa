@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "4w8IW2Pn68jlHkrAxfAcIB",
+    "name" : "DB2 CDC Replication",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "DB2 CDC Replication Project",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}
