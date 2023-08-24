@@ -23,6 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2023-08-24T16:52:20.555Z",
   "objectRefs" : [ {
     "id" : "8hQJpp16bUNjGHro6TdI8v",
     "name" : "sq_CDC_Latency_RecordID",
@@ -35,10 +36,7 @@
       "repoInfo" : {
         "repoHandle" : "01CJ7L42000000000002"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
