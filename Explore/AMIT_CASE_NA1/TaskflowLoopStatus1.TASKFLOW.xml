@@ -1,0 +1,163 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Kx6I1dq2ME9paab-gt-3375537-2023-07-27T14:45:24.586Z::tf.xml</types1:EntryId>
+      <types1:Name>TaskflowLoopStatus1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>suborg_gsuhas@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-07-27T14:45:25Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TaskflowLoopStatus1"
+                   name="TaskflowLoopStatus1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:MappingTask10</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lg0xhifd" targetId="lg0vrc93"/>
+               </start>
+               <eventContainer id="lg0vrc93">
+                  <service id="lg0vrc7i">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">MappingTask10</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">dhEf39iUk8NiNGWCUVsEES</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="MappingTask10">temp.Data Task 1</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 1/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Data Task 1/inout/counter_value">counter_value</operation>
+                        <operation source="field" to="temp.Data Task 1/inout/status2">status2</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lg0vrc7k" targetId="lg0trwdk"/>
+                  <events>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lg0vrc91"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lg0vrc92"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="lg0trwdk" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="lg0trwdo">
+                     <link id="lg0trwdp" targetId="lg0trwdk" type="containerLink"/>
+                  </flow>
+                  <flow id="lg0trwdr">
+                     <assignment id="lg0trwea">
+                        <title>Assignment 1</title>
+                        <operation source="formula" to="temp.Data Task 1[1]/inout[1]/counter_value">
+                           <expression language="XQuery">$temp.DataTask1[1]/inout[1]/counter_value +1</expression>
+                        </operation>
+                        <link id="lg0trweb" targetId="lg0trwe5"/>
+                     </assignment>
+                     <jumpTo id="lg0trwe5">
+                        <link id="lg0trwe6" targetId="lg0vrc93"/>
+                     </jumpTo>
+                  </flow>
+                  <link id="lg0trwdn" targetId="lg0trwdo" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.DataTask1[1]/inout[1]/status2}</arg>
+                           <arg name="right">completed</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="lg0trwdq" targetId="lg0trwdr" type="containerLink"/>
+                  <link id="lg0trwdm" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MappingTask10"
+                              isByCopy="true"
+                              name="MappingTask10">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>341mGOM67Qqfs6LwMkMlSY</types1:GUID>
+      <types1:DisplayName>TaskflowLoopStatus1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-08-02T13:40:45.719Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

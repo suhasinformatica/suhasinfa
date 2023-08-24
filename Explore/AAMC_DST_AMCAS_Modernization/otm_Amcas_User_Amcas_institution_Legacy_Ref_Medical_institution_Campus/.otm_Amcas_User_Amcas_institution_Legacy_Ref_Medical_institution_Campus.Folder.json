@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "5ctus2jaNIrco8y7txqnmr",
+    "name" : "otm_Amcas_User_Amcas_institution_Legacy_Ref_Medical_institution_Campus",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

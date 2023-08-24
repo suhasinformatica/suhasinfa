@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "6894kM55iMcbYH0rPOePoJ",
+    "name" : "MCN_DEN_MEME_FILE",
+    "type" : "FWCONFIG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CJ7L29000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "FIXED WIDTH TARGET FILE MEMBERSHIP",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ ]
+}

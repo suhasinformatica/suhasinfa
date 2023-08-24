@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "7MbEHsv6aajdL1e3SX4dam",
+    "name" : "Taskflow3",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "YcmYsGuDoWn2sqe-gt-11895882-2023-05-29T12:55:24.806Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

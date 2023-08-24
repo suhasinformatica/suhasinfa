@@ -1,0 +1,220 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>J0RKWa-gt-3158807-2023-07-27T14:44:45.574Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_Otm_Afs_Amcas_Institution_R2_1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>suborg_gsuhas@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2023-07-27T14:44:46Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_Otm_Afs_Amcas_Institution_R2.1"
+                   name="tf_Otm_Afs_Amcas_Institution_R2_1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="DT_mt_Legacy_Ref_Medical_Institution_Campus"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">true</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:mt-Amcas-User-Amcas-Institution-Otm-Legacy-Ref-Medical-Institution-Campus-Ins</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l1epfdp6" targetId="l1epfdpb"/>
+               </start>
+               <eventContainer id="l1epfdpb">
+                  <service id="l1epfdp5">
+                     <title>DT_mt_Legacy_Ref_Medical_Institution_Campus</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_Amcas_User_Amcas_Institution_Otm_Legacy_Ref_Medical_Institution_Campus_Ins</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">ao0InG8x7kljNxGFeH8tsH</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field"
+                                      to="mt-Amcas-User-Amcas-Institution-Otm-Legacy-Ref-Medical-Institution-Campus-Ins">temp.DT_mt_Legacy_Ref_Medical_Institution_Campus</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/inout/Email_Notification_Group_IO">Email_Notification_Group_IO</operation>
+                        <operation source="field"
+                                   to="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/inout/Env_Legacy_Ref_Med_Inst_Campus_IO">Env_Legacy_Ref_Med_Inst_Campus_IO</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lecpn95w" targetId="l1epfdqi"/>
+                  <events>
+                     <catch faultField="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/fault"
+                            id="l1epfdp9"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.DT_mt_Legacy_Ref_Medical_Institution_Campus/fault"
+                            id="l1epfdpa"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="l1epfdqi" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="l1epfdqm">
+                     <service id="l1ls5fmx">
+                        <title>NOT_Amcas_Institution_Success_Notification</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/inout[1]/Email_Notification_Group_IO}</parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Subject" source="constant">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/inout[1]/Env_Legacy_Ref_Med_Inst_Campus_IO} Successful completion tf_Otm_Afs_Amcas_Institution_R2.1</parameter>
+                           <parameter name="Email Content Type" source="constant">html</parameter>
+                           <parameter name="Email Body" source="constant">&lt;p&gt;Informatica Taskflow tf_Otm_Afs_Amcas_Institution_R2.1 has been executed successfully.&lt;/p&gt;
+&lt;p&gt;Please use Informatica Monitor &amp;gt; All Jobs for details regarding the successful task flow execution.&lt;/p&gt;</parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                     </service>
+                     <link id="l1epfdqn" targetId="l1epfdqi" type="containerLink"/>
+                  </flow>
+                  <flow id="l1epfdqp">
+                     <service id="l1epfdr1">
+                        <title>NOT_Legcay_Ref_Medical_Institution_Campus_Failure_Notification</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/inout[1]/Email_Notification_Group_IO}</parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Bcc" source="constant"/>
+                           <parameter name="Email Subject" source="constant">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/inout[1]/Env_Legacy_Ref_Med_Inst_Campus_IO} Suspension {$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/output[1]/Object_Name} </parameter>
+                           <parameter name="Email Content Type" source="constant">html</parameter>
+                           <parameter name="Email Body" source="constant">&lt;p&gt;tf_Otm_Afs_Amcas_Institution_R2.1 has been suspended due to a failure in execution.&lt;/p&gt;
+&lt;p&gt;Please use Informatica Monitor &amp;gt; All Jobs for details regarding the task flow execution status and error logs.&lt;/p&gt;</parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                        <link id="l1epfdrc" targetId="l1epfdrb"/>
+                     </service>
+                     <throw id="l1epfdrb">
+                        <title>Throw 1</title>
+                        <throwInput>
+                           <parameter name="code" source="constant" updatable="true">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/fault[1]/code}</parameter>
+                           <parameter name="detail" source="constant" updatable="true"/>
+                           <parameter name="reason" source="constant" updatable="true"/>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="l1epfdql" targetId="l1epfdqm" type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$temp.DT_mt_Legacy_Ref_Medical_Institution_Campus[1]/output[1]/Task_Status}</arg>
+                           <arg name="right">1</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="l1epfdqo" targetId="l1epfdqp" type="containerLink"/>
+                  <link id="l1epfdqk" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Amcas-User-Amcas-Institution-Otm-Legacy-Ref-Medical-Institution-Campus-Ins"
+                              isByCopy="true"
+                              name="mt-Amcas-User-Amcas-Institution-Otm-Legacy-Ref-Medical-Institution-Campus-Ins">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>4F0znwpCwwekWWtP9fKIAC</types1:GUID>
+      <types1:DisplayName>tf_Otm_Afs_Amcas_Institution_R2.1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-27T14:46:39.822Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
