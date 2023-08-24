@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "2J7Bo7mshh5h3ehftNQJiJ",
+    "id" : "8DRm6Sul6GAh26rIxtMBUw",
     "name" : "di_cdc2sf_WPGTBL08",
     "type" : "DTEMPLATE",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CJ7L17000000000007"
+        "repoHandle" : "01C1HR170000000000R6"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,28 +23,9 @@
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2023-08-24T16:55:00.800Z",
   "objectRefs" : [ {
-    "id" : "8P9UKLIYGrQh3vE4XluN8E",
-    "name" : "CDC_DSN",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "01CJ7L0B00000000000A"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "PWX CDC for DB2 ZOS - DSN",
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
-    "id" : "5rGgUSIkq06ljJMksz60Aa",
+    "id" : "6BgNlLawhkvdfc2MuPWUCF",
     "name" : "mplt_GenerateLatencyData",
     "type" : "DMAPPLET",
     "metadata" : {
@@ -53,12 +34,9 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CJ7L40000000000002"
+        "repoHandle" : "01C1HR4000000000001R"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
@@ -67,7 +45,7 @@
     },
     "path" : "/Explore/DB2 CDC Replication"
   }, {
-    "id" : "jAfuVddAMM2gkXhQzY2KiZ",
+    "id" : "7D0hCeGuGI8hU6c3qRjc64",
     "name" : "RAWPROD_IMATICA",
     "type" : "Connection",
     "metadata" : {
@@ -76,11 +54,31 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CJ7L0B00000000000B"
+        "repoHandle" : "01C1HR0B00000000008M"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Snowflake Database RAWPROD",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "48TwwSSq3qIbTvaNnt9Wmt",
+    "name" : "CDC_DSN",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01C1HR0B00000000008L"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "PWX CDC for DB2 ZOS - DSN",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
